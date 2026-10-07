@@ -1,0 +1,116 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+button {
+  padding: 8px 12px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.page {
+  width: min(680px, calc(100% - 32px));
+  margin: 32px auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.details {
+  margin: 24px 0;
+  padding: 16px;
+  border: 1px solid #ccc;
+}
+
+.details p {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.participants {
+  margin: 24px 0;
+}
+
+.participants h2 {
+  font-size: 20px;
+}
+
+.participants ul {
+  padding-left: 24px;
+}
+
+.participants li {
+  margin: 8px 0;
+  overflow-wrap: anywhere;
+}
+
+.participants li span {
+  color: #555;
+}
+
+.nickname-field {
+  display: grid;
+  max-width: 360px;
+  gap: 6px;
+  margin: 20px 0 12px;
+}
+
+.nickname-field input {
+  padding: 8px;
+  font: inherit;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.message {
+  padding: 12px;
+  border: 1px solid #ccc;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+
+.error {
+  color: #a00000;
+  border-color: #a00000;
+}
+
+@media (max-width: 480px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}
